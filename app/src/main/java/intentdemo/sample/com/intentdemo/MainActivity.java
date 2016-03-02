@@ -1,6 +1,7 @@
 package intentdemo.sample.com.intentdemo;
 
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,8 +24,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(MainActivity.this,"Button Clicked",Toast.LENGTH_SHORT).show();
-                Intent secondActIntent=new Intent(MainActivity.this,ActivitySecond.class);
-                startActivity(secondActIntent);
+                /*Intent secondActIntent=new Intent(MainActivity.this,ActivitySecond.class);
+                startActivity(secondActIntent);*/
+                Intent intent=new Intent();
+                intent.setAction("com.sample.intent");
+                intent.addCategory(Intent.CATEGORY_DEFAULT);
+                startActivity(intent);
+
+
             }
         });
     }
