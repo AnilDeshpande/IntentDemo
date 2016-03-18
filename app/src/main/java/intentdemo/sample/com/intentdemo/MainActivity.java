@@ -24,12 +24,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(MainActivity.this,"Button Clicked",Toast.LENGTH_SHORT).show();
-                /*Intent secondActIntent=new Intent(MainActivity.this,ActivitySecond.class);
-                startActivity(secondActIntent);*/
-                Intent intent=new Intent();
+                Intent secondActIntent=new Intent(MainActivity.this,ActivitySecond.class);
+                secondActIntent.putExtra("sampleKey", "This message is being sent from first activity");
+
+                Person person=new Person();
+                person.setFirstName("Ankit");
+                person.setLastName("Agarwal");
+                person.setQualification("B.E");
+
+               secondActIntent.putExtra("person",person);
+                startActivity(secondActIntent);
+
+                /*Intent intent=new Intent();
                 intent.setAction("com.sample.intent");
                 intent.addCategory(Intent.CATEGORY_DEFAULT);
-                startActivity(intent);
+                startActivity(intent);*/
 
 
             }
