@@ -9,4 +9,10 @@
         android:textSize="24sp"
         android:text="This is a second activity"
         android:id="@+id/textViewMessage"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/textViewPerson"/>
 </LinearLayout>

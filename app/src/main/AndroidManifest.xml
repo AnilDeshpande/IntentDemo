@@ -18,10 +18,10 @@
         </activity>
 
         <activity android:name=".ActivitySecond">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="com.sample.intent"/>
                 <category android:name="android.intent.category.DEFAULT"></category>
-            </intent-filter>
+            </intent-filter>-->
             </activity>
     </application>
 
