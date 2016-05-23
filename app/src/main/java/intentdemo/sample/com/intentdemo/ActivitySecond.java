@@ -23,7 +23,7 @@ public class ActivitySecond extends Activity {
         String message=getIntent().getStringExtra("sampleKey");
         textViewMessage.setText(message);
 
-        Person person=(Person)getIntent().getSerializableExtra("person");
+        Person person=(Person)getIntent().getParcelableExtra("person");
 
         textViewPerson.setText(person.getFirstName()+", "+person.getLastName()+", "+person.getQualification());
 
